@@ -7,33 +7,58 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Dodatkowy styl tylko dla tej podstrony */
-    .ppf-image-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 60px 5%;
-      background-color: #0e0e0e;
-    }
+  .ppf-image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 5%;
+    background-color: #0e0e0e;
+  }
 
+  .ppf-image-section img {
+    width: 50%;
+    max-width: 600px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  /* 🔹 DODANE – tylko dla tej strony: naprawa ucinania tekstu */
+  .services-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: visible;
+    max-width: 100%;
+  }
+
+  .service-item {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    flex: 1 1 250px;
+    word-wrap: break-word;
+    overflow: visible;
+  }
+
+  .service-item p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    word-break: break-word;
+  }
+
+  @media (max-width: 768px) {
+    .ppf-image-section {
+      padding: 40px 5%;
+    }
     .ppf-image-section img {
-      width: 50%;
-      max-width: 600px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-      object-fit: cover;
-      user-select: none;
-      -webkit-user-drag: none;
+      width: 100%;
     }
-    @media (max-width: 768px) {
-      .ppf-image-section {
-        padding: 40px 5%;
-      }
-      .ppf-image-section img {
-        width: 100%;
-      }
-    }
-  </style>
+  }
+</style>
+  
 </head>
 <body>
 
