@@ -498,7 +498,7 @@ a:hover {
   background: #fff;
   pointer-events: none;
   z-index: 5;
-  /* ✅ bez transition — ruch natychmiastowy */
+  
 }
 
 
