@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Folia PPF – WrapPoint</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Dodatkowy styl tylko dla tej podstrony */
+    .ppf-image-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 5%;
+      background-color: #0e0e0e;
+    }
+
+    .ppf-image-section img {
+      width: 50%;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      object-fit: cover;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    @media (max-width: 768px) {
+      .ppf-image-section {
+        padding: 40px 5%;
+      }
+      .ppf-image-section img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="left">
+    <a href="index.html" class="logo-link">
+      <img id="logo" src="WRAP POINT..png" alt="WrapPoint logo" draggable="false">
+    </a>
+  </div>
+  <div class="right">
+    <a href="index.html#us">USŁUGI</a>
+    <a href="index.html#con">KONTAKT</a>
+  </div>
+</header>
+
+<section class="services" style="padding-top:80px;">
+  <h2>Folia ochronna PPF</h2>
+  <p style="max-width:800px;margin:20px auto;font-size:1rem;line-height:1.6;color:#cfcfcf;">
+    Folia PPF to przezroczysta warstwa ochronna, która stanowi tarczę dla lakieru. 
+    Chroni przed odpryskami, zarysowaniami i działaniem czynników zewnętrznych. 
+    Dzięki właściwościom samoregenerującym, drobne rysy znikają pod wpływem ciepła, 
+    a karoseria przez lata wygląda jak nowa. Montaż wykonujemy precyzyjnie – bez cięcia na aucie.
+  </p>
+
+  <div class="services-grid" style="margin-top:50px;">
+    <div class="service-item" style="max-width:300px;">
+      <p style="font-size:115%;"><strong>Front Protection</strong></p>
+      <p style="font-size:0.9rem;line-height:1.5;color:#ccc;">
+        Najbardziej narażone elementy auta w pełnej ochronie:
+        <br>– maska i zderzak przedni,<br>– lampy, błotniki, słupki A/B,<br>– czoło dachu, wnęki klamek, próg załadunkowy.
+        <br><br><i>Idealne dla kierowców pokonujących długie trasy.</i>
+      </p>
+    </div>
+
+    <div class="service-item" style="max-width:300px;">
+      <p style="font-size:115%;"><strong>Full Body</strong></p>
+      <p style="font-size:0.9rem;line-height:1.5;color:#ccc;">
+        Kompleksowa ochrona całego auta:
+        <br>– wszystkie elementy lakierowane,<br>– lampy, dach, progi, drzwi, klapa bagażnika,<br>– nadkola i lusterka.
+        <br><br><i>Najwyższy poziom zabezpieczenia – lakier jak nowy przez lata.</i>
+      </p>
+    </div>
+
+    <div class="service-item" style="max-width:300px;">
+      <p style="font-size:115%;"><strong>Detail Protect</strong></p>
+      <p style="font-size:0.9rem;line-height:1.5;color:#ccc;">
+        Skupiony na kluczowych, delikatnych fragmentach:
+        <br>– ranty drzwi, słupki, wnęki klamek,<br>– ekran dotykowy, próg bagażnika, reflektory.
+        <br><br><i>Idealne jako uzupełnienie większego pakietu lub samodzielne zabezpieczenie detali.</i>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Sekcja z obrazkiem -->
+<section class="ppf-image-section">
+  <img src="ppf2.jpg" alt="Przykład zabezpieczenia folią PPF" draggable="false">
+</section>
+
+<div class="contact" id="con">
+  <h2>KONTAKT</h2>
+  <div class="contact-wrapper">
+    
+    <div class="contact-info">
+      <p><strong>Adres:</strong><br>
+      Częstochowska 7, 42-290 Wyrazów</p>
+      
+      <p><strong>Email:</strong><br>
+      kontakt@wrappoint.pl</p>
+      
+      <p><strong>Telefon:</strong><br>
+      +48 880 805 107</p>
+    </div>
+    
+    <div class="contact-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.548634576761!2d18.999261496429757!3d50.7839402384716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4710c83a6a8d7c2f%3A0x767e63721ce57078!2sCz%C4%99stochowska%207%2C%2042-290%20Wyraz%C3%B3w!5e0!3m2!1spl!2spl!4v1752334649932!5m2!1spl!2spl" 
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
