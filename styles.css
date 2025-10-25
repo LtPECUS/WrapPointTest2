@@ -538,13 +538,17 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  * {
+  .before-after-container,
+  .before-after-wrapper,
+  .slider {
     user-select: none;
     -webkit-user-select: none;
     -webkit-user-drag: none;
-    touch-action: none;
+    touch-action: none; 
   }
 }
+
+
 
 
 
