@@ -1,28 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wrap-Point</title>
     <link rel="stylesheet" href="styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
+<style>
+  a:hover {
+  color: #926c15;
+}
+</style>
 </head>
 <body>
 
-    <header  style="overflow: hidden;">
-  <div   style="overflow: hidden;" class="left">
-    <div class="logo" style="overflow: hidden;">
-      <p style="overflow: hidden;">WRAP</p>
-      <p  style="overflow: hidden;" >POINT.</p>
-    </div>
+<header>
+  <div class="left">
+      <a href="index.html"><img src="Logo1.svg" class="logo-img"></a>
+  </div>
+
+
+  <div class="burger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
   </div>
 
   <div class="right">
-    <a href="#us">USŁUGI</a>
-    <a href="#con">KONTAKT</a>
+      <a href="zmiana-koloru.html">ZMIANA KOLORU</a>
+    <a href="folia-ppf.html">FOLIA PPF</a>
+      <a href="#con">KONTAKT</a>
   </div>
 </header>
+
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="zmiana-koloru.html">ZMIANA KOLORU</a>
+    <a href="folia-ppf.html">FOLIA PPF</a>
+    <a href="#con">KONTAKT</a>
+</nav>
+
 
 
     <div id="main">
@@ -67,12 +83,6 @@
     <a href="folia-ppf.html" class="service-item">
       <img src="icons/shield.svg" draggable="false" alt="Ikona folii ochronnej" style="user-select: none;">
       <p><strong>Zabezpieczanie lakieru folią</strong> (PPF)</p>
-
-    </a>
-
-    <a href="oklejanie-detali.html" class="service-item">
-      <img src="icons/details.svg" draggable="false" alt="Ikona detali" style="user-select: none;">
-      <p><strong>Oklejanie detali<br>/ Emblematów</strong></p>
     </a>
 
   </div>
@@ -103,6 +113,16 @@
 
   </div>
 </div>
+
+<script>
+function toggleMenu() {
+    const burger = document.querySelector(".burger");
+    const menu = document.getElementById("mobileMenu");
+
+    burger.classList.toggle("active");
+    menu.classList.toggle("open");
+}
+</script>
 
 
 </body>
