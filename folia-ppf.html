@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    a:hover {
+  color: #926c15;
+}
   .ppf-image-section {
     display: flex;
     justify-content: center;
@@ -56,28 +59,38 @@
     .ppf-image-section img {
       width: 100%;
     }
+
   }
 </style>
   
 </head>
 <body>
-
-<a href="index.html" draggable="false">
- <header  style="overflow: hidden;">
-  <div   style="overflow: hidden;" class="left">
-    <div class="logo" style="overflow: hidden;">
-      <p style="overflow: hidden;">WRAP</p>
-      <p  style="overflow: hidden;" >POINT.</p>
-    </div>
+<header>
+  <div class="left">
+      <a href="index.html"><img src="Logo1.svg" class="logo-img"></a>
   </div>
-  </a>
- 
+
+
+  <div class="burger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
 
   <div class="right">
-    <a href="index.html#us">USŁUGI</a>
-    <a href="index.html#con">KONTAKT</a>
+      <a href="index.html">STRONA GŁÓWNA</a>
+      <a href="zmiana-koloru.html">ZMIANA KOLORU</a>
+      <a href="#con">KONTAKT</a>
   </div>
 </header>
+
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">STRONA GŁÓWNA</a>
+    <a href="zmiana-koloru.html">ZMIANA KOLORU</a>
+    <a href="#con">KONTAKT</a>
+</nav>
+
+
 
 <section class="services" style="padding-top:80px;">
   <h2>Folia ochronna PPF</h2>
@@ -144,6 +157,15 @@
     </div>
   </div>
 </div>
+<script>
+function toggleMenu() {
+    const burger = document.querySelector(".burger");
+    const menu = document.getElementById("mobileMenu");
+
+    burger.classList.toggle("active");
+    menu.classList.toggle("open");
+}
+</script>
 
 </body>
 </html>
