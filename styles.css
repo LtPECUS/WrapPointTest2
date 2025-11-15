@@ -446,12 +446,12 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin-top: 70px;
-  margin-bottom: 160px; /* 🔥 większy odstęp od kontaktu */
+  margin-bottom: 160px; 
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; /* 🔥 nic się nie zaznacza */
-  touch-action: none; /* 🔥 lepsza obsługa dotyku na telefonach */
+  user-select: none; 
+  touch-action: none; 
 }
 
 .before-after-wrapper {
@@ -570,6 +570,122 @@ a:hover {
     -webkit-user-drag: none;
     
   }
+}
+header .left img {
+    width: 220px;    
+    height: auto;
+}
+
+/* tablety */
+@media (max-width: 1024px) {
+    header .left img {
+        width: 170px;
+    }
+}
+
+/* telefony */
+@media (max-width: 768px) {
+    header .left img {
+        width: 140px;
+    }
+}
+
+/* małe telefony */
+@media (max-width: 480px) {
+    header .left img {
+        width: 120px;
+    }
+}
+
+.logo-img {
+    -webkit-user-drag: none;
+    user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: auto;
+}
+/* ===== BURGER — WYGLĄD ===== */
+.burger {
+    width: 28px;
+    height: 22px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 100%;
+    height: 3px;
+    background: #e3e3e3;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* X — animacja */
+.burger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ===== MOBILE HEADER FIX ===== */
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        z-index: 20;
+    }
+
+    .right { display: none; }
+
+    /* burger wraca i jest IDEALNIE WYŚRODKOWANY pionowo */
+    .burger {
+        display: flex !important;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 30;
+    }
+}
+
+/* ===== MENU POD HEADEREM ===== */
+.mobile-menu {
+    width: 100%;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+
+    border-top: 1px solid #222;
+    transition: max-height 0.35s ease, padding 0.3s ease;
+}
+
+.mobile-menu a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e3e3e3;
+    padding: 14px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mobile-menu.open {
+    max-height: 300px;
+    padding: 16px 0;
 }
 
 
