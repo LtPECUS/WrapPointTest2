@@ -55,6 +55,9 @@
       color: #cccccc;
       line-height: 1.6;
     }
+    a:hover {
+  color: #926c15;
+}
 
     @media (max-width: 768px) {
       .color-wrap-section {
@@ -64,21 +67,32 @@
   </style>
 </head>
 <body>
-<a href="index.html" draggable="false">
- <header  style="overflow: hidden;">
-  <div   style="overflow: hidden;" class="left">
-    <div class="logo" style="overflow: hidden;">
-      <p style="overflow: hidden;">WRAP</p>
-      <p  style="overflow: hidden;" >POINT.</p>
-    </div>
+<header>
+  <div class="left">
+      <a href="index.html"><img src="Logo1.svg" class="logo-img"></a>
   </div>
-  </a>
+
+
+  <div class="burger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+  </div>
 
   <div class="right">
-    <a href="index.html#us">USŁUGI</a>
-    <a href="index.html#con">KONTAKT</a>
+   <a href="index.html">STRONA GŁÓWNA</a>
+      <a href="folia-ppf.html">FOLIA PPF</a>
+      <a href="#con">KONTAKT</a>
   </div>
 </header>
+
+<nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">STRONA GŁÓWNA</a>
+    <a href="folia-ppf.html">FOLIA PPF</a>
+    <a href="#con">KONTAKT</a>
+</nav>
+
+
 <section class="color-wrap-section">
   <h2>Zmiana koloru samochodu</h2>
   <p>
@@ -126,7 +140,7 @@
     </div>
 
     <div class="feature-item">
-        <img src="./icons/time2.svg">
+        <img src="./icons/light2.svg">
       <h3>Indywidualny projekt</h3>
       <p>
         Twój samochód, Twój styl. Pomagamy dobrać kolor i efekt, który podkreśli jego linie i osobowość.
@@ -179,6 +193,16 @@
     afterImg.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
     handle.style.left = `${value}%`;
   });
+ 
+function toggleMenu() {
+    const burger = document.querySelector(".burger");
+    const menu = document.getElementById("mobileMenu");
+
+    burger.classList.toggle("active");
+    menu.classList.toggle("open");
+}
+
+
 </script>
 
 </body>
